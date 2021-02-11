@@ -1,0 +1,36 @@
+<%- include('../partials/header.ejs') %>
+
+<section class="view">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <div class="view-img-wrapper">
+          <img class="view-img" src="data:image/jpg;base64, <%= product.image %>" alt="">
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 view-col">
+        <div class="d-flex flex-column">
+          <h1><%= product.name %></h1>
+          <p class="view-price">$<%= product.price %></p>
+          <select name="size">
+            <option class="view-selected"selected>Select size</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+          <button>Add to cart</button>
+        </div>
+        <div class="view-description">
+          <p class="view-detail-header">PRODUCT DETAIL</span>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, asperiores, 
+             deleniti exercitationem accusamus ullam placeat reprehenderit quae voluptas molestias 
+             eveniet recusandae sed amet consectetur doloremque, saepe eos rem explicabo fugit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<%- include('../partials/footer.ejs') %>

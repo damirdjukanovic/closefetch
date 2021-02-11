@@ -1,0 +1,52 @@
+<%- include('../partials/header.ejs') %>
+
+<% const getError = (errors, prop) => {
+  try {
+     return errors.mapped()[prop].msg
+   } catch (err) {
+     return ''; 
+   }  
+  } %>
+
+<div class="container">
+  <form action="/createproduct" method="POST" enctype="multipart/form-data">
+    <div>
+      <label>Product name</label>
+      <input name="name" class="form-control" placeholder="Product name">
+      <p class="errMsg"><%= getError(errors, 'name') %></p>
+    </div>
+    <div>
+      <label>Price</label>
+      <input type="text" name="price" class="form-control">
+      <p class="errMsg"><%= getError(errors, 'price') %></p>
+    </div>
+    <div>
+      <label>Type of clothing</label>
+      <select name="wear" class="form-control" aria-label="Default select example">
+        <option selected>Select</option>
+        <option value="Shirt">Shirts</option>
+        <option value="Jacket">Jackets</option>
+        <option value="Shoes">Shoes</option>
+        <option value="Jeans">Jeans</option>
+        <option value="Hoodie">Hoodies</option>
+        <option value="Eyewear">Eyewear</option>
+      </select>
+    </div>
+    <div>
+      <label>Gender</label>
+      <select name="gender" class="form-control" aria-label="Default select example">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </div>
+    <div>
+      <label>Image</label>
+      <input type="file" name="image" placeholder="image">
+       <p class="errMsg"><%= getError(errors, 'image') %></p> 
+    </div>
+    <button class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<%- include('../partials/footer.ejs') %>
+

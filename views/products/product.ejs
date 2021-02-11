@@ -1,0 +1,15 @@
+<%- include('../partials/header.ejs') %>
+
+<ul>
+  <li><img src="data:image/jpg;base64, <%= product.image %>" alt=""></li>
+  <li><%= product.name %></li>
+  <li><%= product.price %></li>
+  <li><a href="/product/<%= product._id %>/edit" class="btn">Edit</a></li>
+  <form action="/product/<%= product._id %>/delete" method="POST">
+    <li><button class="btn btn-danger">Delete</button></li>
+  </form>
+</ul>
+
+
+
+<%- include('../partials/footer.ejs') %>

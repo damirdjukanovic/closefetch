@@ -1,0 +1,32 @@
+<%- include('../partials/header.ejs') %>
+
+<% const getError = (errors, prop) => {
+  try {
+     return errors.mapped()[prop].msg
+   } catch (err) {
+     return ''; 
+   }  
+  } %>
+
+<div class="container">
+  <form action="/product/<%= product._id %>/edit" method="POST" enctype="multipart/form-data">
+    <div>
+      <label>Product name</label>
+      <input name="name" class="form-control" placeholder="Product name" value="<%= product.name %>">
+      <p class="errMsg"><%= getError(errors, 'name') %></p>
+    </div>
+    <div>
+      <label>Price</label>
+      <input type="text" name="price" class="form-control" value="<%= product.price %>">
+      <p class="errMsg"><%= getError(errors, 'price') %></p>
+    </div>
+    <div>
+      <label>Image</label>
+      <input type="file" name="image" placeholder="image" value="<%= product.image %>">
+    </div>
+    <button class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<%- include('../partials/footer.ejs') %>
+

@@ -1,0 +1,51 @@
+<%- include('../partials/header.ejs') %>
+
+<% const getError = (errors, prop) => {
+  try {
+     return errors.mapped()[prop].msg
+   } catch (err) {
+     return ''; 
+   }  
+  } %>
+
+<section class="signup">
+  <div class="container">
+    <div class="row">
+      <div class="d-none d-md-inline col-md-6 col-lg-7">
+        <img id="signupimg" src="images/signup.png" alt="">
+      </div>
+      <div class="col-md-6 col-lg-5 justify-content-center">
+        <h1 id="signuph1">JOIN THE FAMILY!</h1>
+        <h2 id="signuph2">Register your firm and we'll help you achieve your goal!</h2>
+        <form class="signupform" action="/signup" method="POST">
+          <div>
+            <label>Email address</label>
+            <input type="text" name="email" class="form-control" id="signUpEmail" placeholder="email@example.com">
+            <p class="errMsg"><%= getError(errors, 'email') %></p>
+          </div>
+          <div>
+            <label for="nameOfTheCompany">Name of the Company</label>
+            <input type="text" name="name" class="form-control">
+            <p class="errMsg"><%= getError(errors, 'name') %></p>
+          </div>
+          <div>
+            <label>Password</label>
+            <input type="password" name="password" class="form-control">
+            <p class="errMsg"><%= getError(errors, 'password') %></p>
+          </div>
+          <div>
+            <label>Confirm password</label>
+            <input class="form-control" name="confirmPassword" type="password">
+            <p class="errMsg"><%= getError(errors, 'confirmPassword') %></p>
+          </div>
+          <button class="btn btnsignup">Sign up</button>
+        </form>
+        <div class="dropdown-divider"></div>
+        <p>Have an account?</p><a href="/signin">Sign in here</a>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/footer.ejs') %>

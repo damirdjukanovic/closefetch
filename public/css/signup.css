@@ -1,0 +1,86 @@
+.signup {
+  background-color: #e4e7eb;
+}
+
+.signupform {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5%;
+  margin-top: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.signinform {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5%;
+  margin-top: 0px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+#signupimg {
+  max-width: 100%;
+  height: auto;
+  margin-top: 100px;
+}
+
+#signinimg {
+  max-width: 100%;
+  height: auto;
+  
+}
+
+.form-control {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+div > label {
+  margin: 0;
+  margin-top: 8px;
+  font-size: 16px;
+}
+.btn.btnsignup {
+  display: block;
+  margin: 7px auto;
+  width: 35%;
+  background-color: #edcf47;
+  border-radius: 8%;
+  color: #1b1e23;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+#signuph1 {
+  margin-top: 40px;
+  text-align: center;
+  letter-spacing: 8px;
+}
+
+#signinh1 {
+  margin-top: 100px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+#signuph2 {
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .signupform {
+    width: 80%;
+    margin: 35px auto;
+  }
+  .signinform {
+    width: 80%;
+    margin: 35px auto;
+  }
+}

@@ -1,0 +1,126 @@
+
+.featured {
+  background-color:  #e4e7eb;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.product {
+  height: 34rem;
+  background-color: #fff;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+  transition: all 300ms ease-in-out;
+  border-radius: 1rem;
+}
+
+.product:hover {
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+}
+
+.product-header {
+  position: relative;
+  height: 26rem;
+  transition: all 300ms ease-in-out; 
+  
+}
+
+.product-header img{
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 1rem; 
+  border-top-right-radius: 1rem; 
+}
+
+.product-footer {
+  padding: 2rem 1.6rem 1.6rem 1.6rem;
+}
+
+.product-footer p {
+  font-size: 1.2rem;
+}
+
+.product-price {
+  color: #ff7c9c;
+}
+
+.product:hover .product-header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 1rem 1rem 0 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: all 500ms ease-in-out;
+}
+
+.product-icons {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translate(0, -50%) scale(0);
+  z-index: 2;
+  opacity: 0;
+  transition: all 500ms ease-in-out;
+}
+
+.product-icons span {
+  background-color: #fff;
+  font-size: 1.3rem;
+  display: block;
+  border-radius: 50%;
+  padding: 1.4rem 1.4rem;
+  line-height: 2rem;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  margin-bottom: 0.7rem;
+}
+
+.product-icons span i {
+  transition: all 500ms ease-in-out;
+}
+
+.product-icons span:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.product-icons span:hover {
+  background: #ff7c9c;
+  color: #fff;
+}
+
+.product:hover .product-icons {
+  opacity: 1;
+  transform: translate(0, -50%) scale(1);
+  
+}
+
+.product:hover .product-icons a{
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.home-button {
+  background: none;
+  padding: 0px;
+  border: none;
+  outline:none;
+}
+
+.home-button:focus {
+  outline:none;
+}
+
+
+@media (max-width: 576px) {
+  .product {
+    width: 80%;
+    margin: 30px auto;
+  }
+}
+

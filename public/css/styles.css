@@ -1,0 +1,164 @@
+@import url("landing.css");
+@import url("signup.css");
+@import url("cart.css");
+@import url("home.css");
+
+
+* {
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+ html {
+  
+  box-sizing: border-box;
+  
+ } 
+body {
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  
+} 
+.navbar-nav .dropdown-menu {
+  position: absolute;
+  float: none;
+}
+
+.header-icons a:hover {
+  color: gray;
+}
+
+nav {
+  position: relative;
+}
+
+.header-icons {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  display: flex;
+  flex-direction: row;
+  padding: 0 !important;
+  margin: 0 !important;
+  
+}
+.collapse.navbar-collapse {
+  padding-right: 60px;
+}
+
+#account-icon-header {
+  margin-right: -5px;
+}
+
+#cart-icon-header {
+  margin-top: 4px;
+  margin-left: 5px;
+}
+
+.navbar {
+  background-color: #e4e7eb !important;
+  font-weight: 500;
+}
+
+.errMsg {
+  margin: 0 auto;
+  text-align: center;
+  color: red;
+  
+}
+
+li {
+  list-style-type: none;
+}
+
+
+
+.cardPrice {
+  margin-left: 50px;
+  font-size: 30px;
+}
+
+.navbar {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.searchform {
+  width: 75% !important;
+}
+
+.sideNav {
+  width: 50%;
+
+}
+
+.navform {
+  width:100%;
+  margin-right: -30px;
+}
+
+#navicon {
+  position: relative;
+  left: 10px;
+}
+
+.navicon {
+  font-size: 25px;
+  margin-right: 30px;
+  color:#1b1e23;
+}
+
+.dp-icon {
+  font-size: 25px;
+  margin-right: 30px;
+  margin-top: 5px;
+  display: block;
+}
+
+.naviconcolor {
+  color:#1b1e23;
+}
+.nav-link {
+  color:#1b1e23;
+} 
+
+.dropdown-toggle::after { 
+  content: none; 
+} 
+
+.dp-menu-right {
+  transform: translateX(-50%);
+}
+
+.footer {
+  background-color: #3f3f3f;
+  box-sizing: border-box;
+  padding-top: 50px;
+  padding-bottom: 20px;
+ 
+
+}
+
+.footerh3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #d3d3d3;
+}
+
+.footer li {
+  padding-top: 5px;
+}
+
+.footericon {
+  font-size: 30px;
+  margin: 7px;
+}
+
+@media (max-width:769px) {
+  .header-icons {
+    position: absolute;
+    right: 0;
+    
+    
+  }
+}

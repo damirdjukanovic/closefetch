@@ -1,0 +1,95 @@
+.home {
+  background-color:  #e4e7eb;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#homeimg {
+  position: absolute;
+  
+  width: 400px;
+  right: 200;
+  bottom: 0;
+ 
+}
+
+#homeh1 {
+  
+  letter-spacing: 8px;
+  position: absolute;
+  top: 200;
+  left: 150;
+  
+}
+
+#homeh2 {
+  letter-spacing: 8px;
+  position: absolute;
+  top: 260;
+  left: 250;
+  color:#1b1e23 !important;
+}
+
+@media (max-width: 768px) {
+  #homeh1 {
+    font-size: 31px;
+    letter-spacing: 8px;
+    position: absolute;
+    top: 50;
+    left: 60;
+    
+  }
+  
+  .home {
+   height: 663px; 
+  }
+
+  #homeh2 {
+    font-size: 27px;
+    letter-spacing: 8px;
+    position: absolute;
+    top: 110;
+    left: 137;
+  }
+  #homeimg {
+    position: absolute;
+    width: 300px;
+    left: 110px;
+    top: 200;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  #homeh1 {
+  
+    letter-spacing: 8px;
+    position: absolute;
+    top: 100;
+    left: 50;
+    
+  }
+  
+  #homeh2 {
+    letter-spacing: 8px;
+    position: absolute;
+    top: 160;
+    left: 150;
+  }
+  #homeimg {
+    position: absolute;
+    width: 350px;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  #homeimg {
+    position: absolute;
+    width: 350px;
+    right: 0;
+    bottom:0;
+  }
+}
+

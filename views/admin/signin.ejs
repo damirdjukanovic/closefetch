@@ -1,0 +1,50 @@
+<%- include('../partials/header.ejs') %>
+
+<!-- <div class="container">
+  <form action="/signin" method="POST">
+    <div>
+      <label for="email">Email address</label>
+      <input type="text" name="email" class="form-control" id="signInEmail" placeholder="email@example.com">
+        <p class="errMsg"><%= error1  %></p>
+    </div>
+    <div>
+      <label>Password</label>
+      <input type="password" name="password" class="form-control" placeholder="Password">
+        <p class="errMsg"><%= error2 %></p>
+    </div>
+    <button class="btn btn-primary">Sign in</button>
+  </form>
+  <div class="dropdown-divider"></div>
+  <p>New around here?</p><a href="/signup">Sign up</a>
+</div> -->
+
+<section class="signup">
+  <div class="container">
+    <div class="row">
+      <div class="d-none d-md-inline col-md-6 col-lg-7">
+        <img id="signinimg" src="images/signin.png" alt="">
+      </div>
+      <div class="col-md-6 col-lg-5 justify-content-center">
+        <h1 id="signinh1">Log in!</h1>
+        <form class="signinform" action="/signin" method="POST">
+          <div>
+            <label>Email address</label>
+            <input type="text" name="email" class="form-control" id="signUpEmail">
+            <p class="errMsg"><%= error1  %></p>
+          </div>
+          <div>
+            <label>Password</label>
+            <input type="password" name="password" class="form-control">
+            <p class="errMsg"><%= error2 %></p>
+          </div>
+          <button class="btn btnsignup">Sign in</button>
+        </form>
+        <div class="dropdown-divider"></div>
+        <p>Don't have an account?</p><a href="/signup">Sign up here!</a>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/footer.ejs') %>

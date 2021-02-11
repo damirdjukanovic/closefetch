@@ -1,0 +1,29 @@
+<%- include('./partials/header.ejs') %>
+
+   
+ <% if(user.products.length > 0) {
+     result.forEach((product) => {
+      user.products.forEach((item) => {
+        if(item.id == product._id) { %>
+          <ul> 
+            <li><%= product.name %></li>
+            <li><%= product.price %></li>
+            <li><img src="data:image/jpg;base64, <%= product.image %>"</li>
+            <form action="/cart/products" method="POST">
+              <input hidden value="<%= product._id %>" name="productId">
+              <li><button class="btn btn-success">Add to cart</button></li>
+              <a href="/products/view/<%= product._id %>" class="btn">View</button>
+            </form>
+          </ul> 
+      </div>
+      <%  }
+      });
+    }); 
+  } else { %>
+  <p>You dont have any products</p>
+<% } %>    
+       
+ 
+    
+
+<%- include('./partials/footer.ejs') %>

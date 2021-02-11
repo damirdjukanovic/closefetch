@@ -1,0 +1,105 @@
+<html>
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/styles2.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <li class="nav-item dropdown d-none d-lg-inline">
+        <a class="nav-link navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Closefetch
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Women</a>
+          <a class="dropdown-item" href="#">Men</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Jackets</a>
+          <a class="dropdown-item" href="#">Shirts</a>
+          <a class="dropdown-item" href="#">Shoes</a>
+          <a class="dropdown-item" href="#">Hoodies</a>
+          <a class="dropdown-item" href="#">Jeans</a>
+          <a class="dropdown-item" href="#">Eyewear</a>
+        </div>
+      </li>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-header navbar-right pull-right">
+        <ul class="nav navbar-nav navbar-right">
+          <div class="header-icons">
+            <li class="navicon" id="account-icon-header">
+            <div class="dropdown show">
+                <a class="naviconcolor dp-icon dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class='bx bxs-user-account'></i>
+                </a>
+              <div class="dropdown-menu dp-menu-right" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="/signup">Sign up</a>
+                <a class="dropdown-item" href="/signin">Sign in</a>
+              </div>
+              </div>
+            </li>
+            <li id="cart-icon-header"><a class="navicon" href="/cart"><i class='bx bx-cart' ></i></a></li>
+          </div>
+        </ul>
+      </div>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto d-none d-md-inline">
+          <li class="nav-item active">
+            <a class="nav-link" href="/home">Home</a>
+          </li>
+        </ul>  
+          <ul class="navbar-nav sideNav">
+            <li class="navform">
+              <form class="form-inline my-2 my-lg-0 ">
+                <input class="form-control searchform mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <a id="navicon" href="#"><i class='bx bx-search'></i></a>
+              </form>
+              </li>
+
+              <li class="nav-item d-block d-lg-none">
+                <a class="nav-link" href="#">Women</a>
+              </li>
+              <li class="nav-item d-block d-lg-none">
+                <a class="nav-link" href="#">Men</a>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li class="nav item d-block d-lg-none">
+                <a class="nav-link" href="#">Jackets</a>
+              </li>
+              <li class="nav-item d-block d-lg-none">
+                <a class="nav-link" href="#">Shirts</a>
+              </li>
+              <li class="nav-item d-block d-lg-none">
+                <a class="nav-link" href="#">Shoes</a>
+              </li>
+              <li class="nav-item d-block d-lg-none">
+                <a class="nav-link" href="#">Hoodies</a>
+              </li>
+              <li class="nav-item d-block d-lg-none">
+                <a class="nav-link" href="#">Eyewear</a>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li class="nav-item d-block d-lg-none">
+                <a class="nav-link" href="/home">Home</a>
+              </li>
+          </ul>      
+      </div>
+    </nav> 
+
+    <div class="container">
+      <% if(messageError && messageError.length > 0) { %>
+      <div class="alert alert-danger" role="alert"><%= messageError %></div>
+      <% } %>
+      <% if(messageSuccess && messageSuccess.length > 0) { %>
+        <div class="alert alert-success" role="alert"><%= messageSuccess %></div>
+        <% } %>
+    </div>
